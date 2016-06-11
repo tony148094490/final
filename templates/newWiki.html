@@ -1,0 +1,7 @@
+{% block content %}
+<form action="/wiki/_edit{{url}}?v={{version}}" method="post">
+	<textarea rows=20 cols="40" name="content">{{content}}</textarea><br>
+	<h1 style="color:red;">{{contentError}}</h1>
+	<input type="submit" value="Save">
+</form>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% block content %}
+<form>
+	<ul>
+		{% if entries %}
+		{% for entry in entries %}
+		<h1 style="margin:0;font-size:medium">
+			Content: {{ entry.content }}
+		</h1>
+		<h1 style="margin:0;font-size:small">
+			Created on: {{ entry.creationDate }}
+		</h1>
+		<h1 style="margin:0;font-size:small">
+			Version: {{ entry.version }}
+			<a href="/wiki/_edit{{url}}?v={{entry.version}}">Edit</a> | <a href="/wiki{{url}}?v={{entry.version}}">View</a>
+		</h1>
+		<br>
+		{% endfor %}
+		{% endif %}
+	</ul>
+</form>
+
+
+
+<div style="position:absolute;width:120px;top:20;right:50;text-align:right;">
+	{% if cookie %}
+		<a href="/wiki/_edit{{url}}">Edit</a> | <a href="/wiki{{url}}">View</a>
+		<br>
+		<a href="/wiki/logout">Logout</a>
+	{% else %}
+		<a href="/wiki/login">Login</a> | <a href="/wiki/signup">Signup</a>
+	{% endif %}
+</div>
+
+<br>
+{% endblock %}

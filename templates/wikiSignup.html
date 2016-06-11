@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Signup </title>
+</head>
+<body>
+<form action="/wiki/signup" method="post">
+	Username: <input type="text" name="username" value="{{username}}">{{usernameError}}<br>
+	Password: <input type="password" name="password" value="{{password}}">{{passwordError}}<br>
+	Verify Password: <input type="password" name="verify" value="{{verify}}">{{verifyError}}<br>
+	Email(Optional): <input type="text" name="email" value="{{email}}">{{emailError}}<br>
+	<input type="submit" value="Submit">
+</form>
+</body>
+</html>

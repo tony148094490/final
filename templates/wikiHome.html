@@ -1,0 +1,17 @@
+{% block content %}
+<form action="/wiki" method="get">
+		{% if entry %}
+				<li>
+					<br>
+					{{entry.content }}
+					created on {{entry.createdDate}}
+				</li>
+		{% endif %}
+
+</form>
+<br>
+<br>
+<br>
+<br>
+This page was queried {{cacheAge}} seconds ago.
+{% endblock %}
